@@ -50,29 +50,38 @@ main .social-media  img {
 
 }
 
-main.alternative span {
+main .alternative {
 
     margin-top: 1rem;
+}
+
+main .alternative span {
+
+    font-size: 1.1rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.3);
+    color:rgba(255,255,255, 0.3);
     position: relative;
 
 }
-
 main .alternative span::before, main .alternative span::after {
+
     position: absolute;
-    content: '';
+    content: ' ';
     height: 1px;
     width: 100px;
+    background: rgba(255,255,255, 0.3); 
     bottom: 50%;
-    right: 50px;
-    background: rgba(255, 255, 255, 0.3);
-}
+    right:50px;
 
+
+}
 main .alternative span::after {
 
-
+    left: 50px;
 }
+
+
+
 main .social-media a:first-child img{
     margin-left: 0;
 
@@ -104,7 +113,7 @@ main form input {
     border: 1px #040b18;
     border-radius: 8px;
 }
-/* main form input[type="submit"] {
+ /* main form input[type="submit"] {
 
     cursor: pointer;
     width: 50%;
@@ -119,7 +128,7 @@ main form input {
 main form input[type="submit"]:hover {
     background: #5952d4;
 
-} */
+}  */
 section.images {
     display:flex;
     align-items: flex-end;
