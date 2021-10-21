@@ -14,8 +14,10 @@ body {
     font-weight: 500;
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
 
 }
+
 main {
 
     width: 50vw;
@@ -24,24 +26,28 @@ main {
     align-items: center;
     justify-content: center;
 
+
 }
+
 main h1 {
 
     color:#8880fe;
     font-size:3rem;
     margin-bottom: 3rem;
+    text-align: center;
 
 }
+
 main .social-media {
     display:flex;
     align-content: center;
 
 }
+
 main .social-media a {
     text-decoration: none;
-
-
 }
+
 main .social-media  img {
     width: 36px;
     margin-left: 3rem;
@@ -49,6 +55,12 @@ main .social-media  img {
 
 
 }
+
+main .social-media a:first-child img{
+    margin-left: 0;
+
+}
+
 
 main .alternative {
 
@@ -63,44 +75,41 @@ main .alternative span {
     position: relative;
 
 }
+
 main .alternative span::before, main .alternative span::after {
 
     position: absolute;
-    content: ' ';
+    content: '';
     height: 1px;
     width: 100px;
-    background: rgba(255,255,255, 0.3); 
     bottom: 50%;
     right:50px;
-
-
+    background: rgba(255,255,255, 0.3); 
 }
-main .alternative span::after {
 
+main .alternative span::after {
     left: 50px;
 }
 
 
-
-main .social-media a:first-child img{
-    margin-left: 0;
-
-}
 main form {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
+
 main form label {
     display: flex;
     flex-direction: column;
 
 }
+
 main form label span {
     font-size:1.1rem;
     margin-top: 2rem;
 }
+
 main form input {
     background: #161923;
     width: 300px;
@@ -133,17 +142,64 @@ section.images {
     display:flex;
     align-items: flex-end;
     padding: 4rem;
+    width: 50vw;
+    padding: 4rem;
 }
+
 section.images  img {
-    width: 90%;
+    width: 100%;
 }
+
 section.images .circle {
-    position:absolute;
+    position: absolute;
     height: 100%;
     width:100%;
     top: 0;
     left: 0;
     background: linear-gradient(45deg, #e8cbc0, #636fa4);
     clip-path:circle(40% at right 80%);
-    z-index:-1;
+    z-index: -1;
 }
+
+@media only screen and (min-width: 900px) and (max-width:1200px) {
+  
+    section.images img {
+        width: 110%;
+    }
+
+    section.images .circle{
+        clip-path: circle(35% at right 80%);
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    section .images {
+        display: none;
+        visibility: hidden;
+
+
+    }
+
+    main {
+        width:100vw
+    }
+
+}
+@media only screen and (max-width: 450px) {
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main .alternative span {
+
+        font-size:0.8rem;
+
+    }
+    main form label {
+        font-size: 1rem;
+
+    }
+}
+
